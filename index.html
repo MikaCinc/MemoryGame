@@ -1,0 +1,53 @@
+<html>
+	<head>
+			<script type="text/javascript" src="code.js"></script>
+			<link rel="stylesheet" type="text/css" href="style.css">
+			<meta charset="utf-8">
+			<title> Memory Game </title>
+	</head>
+	<body>
+		<h1 id="naslov">Memory Game (Scorpio): </h1>
+		<div id="podesavanja_div">
+			<br>
+			<p class="meni" id="meni1">> Izaberi težinu:</p>
+			<label>Lako: <input type="radio" name="nivo_igre" ></label>
+			<br>
+			<label>Srednje: <input type="radio" name="nivo_igre" checked></label>
+			<br>
+			<label>Teško: <input type="radio" name="nivo_igre"></label>
+			<br>
+			<p class="meni" id="meni2">> Izgled tabele:</p>
+			<select>
+				<option>Uvek kvadrat</option>
+				<option>Nasumično</option>
+			</select>
+			<br>
+			<p class="meni" id="meni3">> Vremensko ograničenje:</p>
+			<label>Uključi: <input type="radio" name="vreme_radio" checked onchange="vreme_isk_uk()"></label>
+			<label>Isključi: <input type="radio" name="vreme_radio" onchange="vreme_isk_uk()"></label>
+			<br>
+			<input type="number" min="1" max="250" id="vrem_ogr_input" class="default_input" value="50"><p id="vrem_input_sekundi"> sek.</p>
+			<br>
+			<button class="button_orange" onclick="start()">Počni</button>
+		</div>
+		<div id="igra_div">
+		<div id="igra_info">
+			<p>Broj otvorenih parova: <span id="br_o_parova">0</span></p>
+			<p>Broj rešenih parova: <span id="br_res_parova">0</span></p>
+			<p>Preostalo vreme: <span id="br_sekundi">0</span>s</p>
+		</div>
+			
+			<button class="button_red" onclick="pocni_ponovo()">Počni ponovo</button>
+			<button class="button_blue" onclick="druga_podesavanja()">Promeni podešavanja</button>
+			<br>
+			<br>
+			<table id="tabela">
+			
+			</table>
+			<br>
+			<div id="parent_div"><div id="child_div"></div></div>
+		</div>
+		<p id="mikac_inc">by: <b><span id="mikac_inc_span"></span></b></p>
+		<p id="scorpio">Project: //Scorpio/ © .</p>
+	</body>
+</html>
